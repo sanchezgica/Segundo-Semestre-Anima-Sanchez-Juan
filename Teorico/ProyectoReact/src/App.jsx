@@ -9,7 +9,14 @@ function App() {
   return (
     <>
       <div className="containter">
-        <Sidebar image=""></Sidebar>
+        <div className="row">
+          <Sidebar
+            image="https://i.ytimg.com/vi/VPFdyk0kadY/maxresdefault.jpg"
+            quote="¿Puedes ver lo infinito que eres?"
+            cite="Vagabond"
+          ></Sidebar>
+          <div className="col-10"></div>
+        </div>
       </div>
     </>
   );
