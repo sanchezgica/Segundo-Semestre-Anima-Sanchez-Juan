@@ -17,6 +17,12 @@ function App() {
         descripcion="Universo Prime"
         link="https://rickandmorty.fandom.com/es/wiki/Rick_S%C3%A1nchez"
       />
+      <Tarjeta
+        name="Summer Smith"
+        image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcostumerocket.com%2Fwp-content%2Fuploads%2F2023%2F07%2Fsummer-smith.jpg&f=1&nofb=1&ipt=06869c778e17ed6890180b4b3679ef1206bf9e930d2dd52876601892d0442909"
+        descripcion="Universo Respaldo"
+        link="https://rickandmorty.fandom.com/wiki/Summer_Smith"
+      ></Tarjeta>
     </>
   );
 }
