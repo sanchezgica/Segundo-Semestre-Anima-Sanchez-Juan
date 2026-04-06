@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import "../src/assets/hidden.png";
+import "../src/assets/eye.png";
 import "./App.css";
 
 function App() {
@@ -28,7 +29,25 @@ function App() {
             +
           </button>
           <button className="counter" onClick={cambioMostrar}>
-            {mostrar ? "Ocultar" : "Mostrar"}
+            {mostrar ? (
+              <span>
+                <img
+                  className="icon"
+                  src="../src/assets/hidden.png"
+                  alt="hide icon"
+                />
+                <p>Ocultar</p>
+              </span>
+            ) : (
+              <span>
+                <img
+                  className="icon"
+                  src="../src/assets/eye.png"
+                  alt="show icon"
+                />
+                <p>Mostrar</p>
+              </span>
+            )}
           </button>
         </div>
       </section>
