@@ -18,18 +18,18 @@ function App() {
   return (
     <>
       <section id="center">
-        <div>
-          <h1>Ficha 1 - Contador</h1>
-          <div>
-            <button className="counter" onClick={resta}>
-              -
-            </button>
-            {mostrar && <p>{count}</p>}
-            <button className="counter" onClick={suma}>
-              +
-            </button>
-            <button onClick={cambioMostrar}>Mostrar</button>
-          </div>
+        <h1>Ficha 1 - Contador</h1>
+        <div className="container">
+          <button className="counter" onClick={resta}>
+            -
+          </button>
+          {mostrar && <p>{count}</p>}
+          <button className="counter" onClick={suma}>
+            +
+          </button>
+          <button className="counter" onClick={cambioMostrar}>
+            {mostrar ? "Ocultar" : "Mostrar"}
+          </button>
         </div>
       </section>
     </>
