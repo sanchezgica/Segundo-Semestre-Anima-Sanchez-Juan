@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
+import { useFecha } from "../../hooks/useFecha";
 
 function Tarjeta(props) {
-  const [fechaHoy, setFechaHoy] = useState(new Date().toLocaleString("es-ES"));
-  useEffect(() => {
-    const refrescarFecha = () => {
-      setFechaHoy(new Date().toLocaleString("es-ES"));
-    };
-    const intervalo = setInterval(refrescarFecha, 1000);
-  });
+  const fecha = useFecha();
   return (
     <div className="card d-flex flex-column align-items-center pt-2">
       <img
@@ -23,7 +18,7 @@ function Tarjeta(props) {
         <br />
         <cite>{props.cite}</cite>
         <hr />
-        <p>{fechaHoy}</p>
+        <p>{fecha}</p>
       </div>
     </div>
   );
