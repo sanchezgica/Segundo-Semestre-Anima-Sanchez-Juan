@@ -24,13 +24,13 @@ function App() {
           <button className="counter" onClick={resta}>
             -
           </button>
-          {mostrar && <p>{count}</p>}
+          <div className="texto">{mostrar && <p>{count}</p>}</div>
           <button className="counter" onClick={suma}>
             +
           </button>
           <button className="counter" onClick={cambioMostrar}>
             {mostrar ? (
-              <span>
+              <span className="container-span" style={{ gap: "4px" }}>
                 <img
                   className="icon"
                   src="../src/assets/hidden.png"
@@ -39,7 +39,7 @@ function App() {
                 <p>Ocultar</p>
               </span>
             ) : (
-              <span>
+              <span className="container-span" style={{ gap: "4px" }}>
                 <img
                   className="icon"
                   src="../src/assets/eye.png"
