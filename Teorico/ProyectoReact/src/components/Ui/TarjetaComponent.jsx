@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react";
+import { useFecha } from "../../hooks/useFecha";
+
 function Tarjeta(props) {
-  const fechaHoy = new Date().toLocaleString("es-ES");
+  const fecha = useFecha();
   return (
     <div className="card d-flex flex-column align-items-center pt-2">
       <img
@@ -15,7 +18,7 @@ function Tarjeta(props) {
         <br />
         <cite>{props.cite}</cite>
         <hr />
-        <p>{fechaHoy}</p>
+        <p>{fecha}</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import Tarjeta from "../molecules/TarjetaComponente";
+import Tarjeta from "../Ui/TarjetaComponent";
 
 function Sidebar(props) {
   return (
