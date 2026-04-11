@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(12);
   const suma = () => setCount((count) => count + 1);
   const resta = () => {
     if (count > 0) {
@@ -17,7 +17,10 @@ function Counter() {
       <button className="counter" onClick={resta}>
         -
       </button>
-      {mostrar && <p>{count}</p>}
+      <span>
+        <h2>{count}</h2>
+        {mostrar && <p>(Nota de la ficha)</p>}
+      </span>
       <button className="counter" onClick={suma}>
         +
       </button>
