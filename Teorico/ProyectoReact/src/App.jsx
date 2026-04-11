@@ -39,9 +39,7 @@ function App() {
             quote="¿Puedes ver lo infinito que eres?"
             cite="Vagabond"
           ></Sidebar>
-          <main className="col-10">
-            {renderContenidoPrincipal()} {/* ← Aquí va el contenido dinámico */}
-          </main>
+          <main className="col-10">{renderContenidoPrincipal()}</main>
         </div>
         <div className="row">
           <Footer></Footer>
