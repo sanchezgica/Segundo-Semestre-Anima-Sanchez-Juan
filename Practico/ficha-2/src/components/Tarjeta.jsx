@@ -8,7 +8,12 @@ function Tarjeta() {
     <div>
       <ul>
         {pokemones.map((pokemon) => (
-          <li key={pokemon.id}>{pokemon.nombre}</li>
+          <li key={pokemon.id}>
+            <div>
+              <p>{pokemon.nombre}</p>
+              <p style={{ color: "#FF0000" }}>{pokemon.tipo}</p>
+            </div>
+          </li>
         ))}
       </ul>
     </div>
