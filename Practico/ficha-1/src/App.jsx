@@ -2,24 +2,14 @@ import { useState } from "react";
 import "../src/assets/hidden.png";
 import "../src/assets/eye.png";
 import "./App.css";
+import Counter from "./components/counterComponent";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const suma = () => setCount((count) => count + 1);
-  const resta = () => {
-    if (count > 0) {
-      setCount((count) => count - 1);
-    }
-  };
-  const [mostrar, setMostrar] = useState(true);
-  const cambioMostrar = () => {
-    setMostrar(!mostrar);
-  };
-
   return (
     <>
       <section id="center">
         <h1>Ficha 1 - Contador</h1>
+<<<<<<< HEAD
         <div className="container">
           <button className="counter" onClick={resta}>
             -
@@ -50,6 +40,9 @@ function App() {
             )}
           </button>
         </div>
+=======
+        <Counter></Counter>
+>>>>>>> 3f214d1ce927b83580b4b973ff3110512f6811db
       </section>
     </>
   );

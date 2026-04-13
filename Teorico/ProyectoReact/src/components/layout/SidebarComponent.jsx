@@ -1,4 +1,4 @@
-import Tarjeta from "../Ui/TarjetaComponent";
+import Tarjeta from "../ui/TarjetaComponent";
 
 function Sidebar(props) {
   return (
