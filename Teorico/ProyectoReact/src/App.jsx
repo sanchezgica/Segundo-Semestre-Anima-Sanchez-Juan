@@ -6,6 +6,7 @@ import Navbar from "./components/layout/NavBarComponent.jsx";
 import AboutComponent from "./components/sections/AboutComponent.jsx";
 import InterestComponent from "./components/sections/InterestComponent.jsx";
 import ContactComponent from "./components/sections/ContactComponent.jsx";
+import PortfolioComponent from "./components/sections/PortfolioComponent.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,8 @@ function App() {
         return <InterestComponent />;
       case "contact":
         return <ContactComponent />;
+      case "portfolio":
+        return <PortfolioComponent />;
       default:
         return <AboutComponent />;
     }
