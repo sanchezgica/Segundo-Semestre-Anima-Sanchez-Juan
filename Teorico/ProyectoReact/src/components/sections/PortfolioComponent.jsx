@@ -2,7 +2,7 @@ import TarjetaPortfolio from "../ui/TarjetaPortfolioComponent";
 
 function PortfolioComponent() {
   return (
-    <div className="containter">
+    <div className="containter d-grid gap-4">
       <h1>Materias</h1>
       <div className="row">
         <div className="col-4">
