@@ -3,6 +3,7 @@ function MenuComponent({ seccionActiva, setSeccionActiva }) {
     { id: "about", label: "Sobre Proyecto" },
     { id: "interest", label: "Intereses" },
     { id: "contact", label: "Contacto" },
+    { id: "portfolio", label: "Materias" },
   ];
 
   return (
