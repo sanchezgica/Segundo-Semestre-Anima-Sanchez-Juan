@@ -7,6 +7,8 @@ export function useFecha() {
       setFecha(new Date().toLocaleString("es-ES"));
     };
     const intervalo = setInterval(refrescarFecha, 1000);
-  });
+
+    return () => clearInterval(intervalo);
+  }, []);
   return fecha;
 }
