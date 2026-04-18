@@ -10,8 +10,8 @@ function ListaSimple() {
   return (
     <>
       <ul>
-        {listaJuegos.map((juego) => (
-          <li>{juego}</li>
+        {listaJuegos.map((juego, index) => (
+          <li key={index}>{juego}</li>
         ))}
       </ul>
     </>
