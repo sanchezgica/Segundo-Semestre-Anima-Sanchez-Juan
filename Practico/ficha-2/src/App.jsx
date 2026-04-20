@@ -13,10 +13,13 @@ function App() {
   ];
   return (
     <>
+      <h1>Ficha 2 - Listas y Renders Dinámicos</h1>
+      <h3>1.1 Lista simple a partir de un array.</h3>
       <div>
         <ListaSimple></ListaSimple>
       </div>
-      <div>
+      <h3>1.2 Tarjetas desde una lista.</h3>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         {personas.map((persona) => (
           <TarjetaLista
             key={persona.id}
@@ -25,6 +28,7 @@ function App() {
           ></TarjetaLista>
         ))}
       </div>
+      <h3>1.3 Lista con botón</h3>
       <div>
         {visible && <Tarjeta></Tarjeta>}
         <button
