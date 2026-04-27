@@ -1,0 +1,38 @@
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.containerList {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.card {
+  padding: 20px;
+  border: solid 4px rgba(0, 64, 255, 0.396);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 300px;
+}
+
+.button {
+  background-color: rgb(2, 2, 87);
+  color: antiquewhite;
+  font-size: medium;
+}
+
+.favorite {
+  background-color: rgb(154, 48, 9);
+  color: blanchedalmond;
+  border-radius: 8px;
+}

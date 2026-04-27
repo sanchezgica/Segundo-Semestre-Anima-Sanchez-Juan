@@ -13,8 +13,14 @@ function App() {
   return (
     <>
       <Tarjeta
+<<<<<<< HEAD
         name="Gorillaz"
         image="https://upload.wikimedia.org/wikipedia/en/c/c6/Gorillaz_family.jpg"
+=======
+        artist="Gorillaz"
+        image="https://upload.wikimedia.org/wikipedia/en/d/df/Gorillaz_Demon_Days.PNG?_=20240708154720"
+        album="Demon Days"
+>>>>>>> 2b44ce38a34c277bf522dddaa6f7f5f2c730c65a
       ></Tarjeta>
     </>
   );
