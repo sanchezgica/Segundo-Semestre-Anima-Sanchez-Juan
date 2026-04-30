@@ -5,21 +5,25 @@ function FormSimple() {
   const [age, setAge] = useState("");
   const manejaSubmit = (e) => {
     e.preventDefault();
-    alert("Formulario Enviado");
+    alert(`Nombre: ${name} Edad: ${age}`);
   };
   return (
     <div>
       <fieldset>
         <legend>Formulario con alerta</legend>
         <form onSubmit={manejaSubmit}>
+          <label htmlFor="nombre">Nombre</label>
           <input
+            name="nombre"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Ingresa tu nombre"
           />
+          <label htmlFor="edad">Edad</label>
           <input
-            type="text"
+            name="edad"
+            type="number"
             value={age}
             onChange={(e) => setAge(e.target.value)}
             placeholder="Ingresa tu edad"

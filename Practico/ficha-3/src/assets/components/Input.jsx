@@ -4,7 +4,7 @@ function Input() {
   const [name, setName] = useState("");
   return (
     <div>
-      <h2>"Hola, {name}"</h2>
+      {name !== "" ? <h2>"Hola, {name}"</h2> : <h2>"Hola"</h2>}
       <input
         type="text"
         value={name}

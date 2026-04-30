@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from "./Card";
 
 function FormTarjeta() {
   const [show, setShow] = useState(true);
@@ -13,13 +14,17 @@ function FormTarjeta() {
         <fieldset>
           <legend>Formulario para tarjeta</legend>
           <form onSubmit={manejaSubmit}>
+            <label htmlFor="title">Titulo</label>
             <input
+              name="title"
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Ingresa el titulo"
             />
+            <label htmlFor="description">Titulo</label>
             <input
+              name="description"
               type="text"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -31,12 +36,7 @@ function FormTarjeta() {
           </form>
         </fieldset>
       )}
-      {!show && (
-        <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
-      )}
+      {!show && <Card title={title} description={description}></Card>}
     </div>
   );
 }
