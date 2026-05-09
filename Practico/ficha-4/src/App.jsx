@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import ProductCard from "./components/ProductCard";
 import ProductList from "./components/ProductList";
+import Header from "./components/Header";
+import CarritoComponent from "./components/CarritoComponent";
 function App() {
   const [carrito, setCarrito] = useState([]);
   const agregarAlCarrito = (producto) => {
@@ -16,11 +18,15 @@ function App() {
 
   return (
     <>
+      <Header></Header>
       <div>
         <ProductList
           productos={productos}
           agregarAlCarrito={agregarAlCarrito}
         ></ProductList>
+      </div>
+      <div>
+        <CarritoComponent carrito={carrito}></CarritoComponent>
       </div>
     </>
   );

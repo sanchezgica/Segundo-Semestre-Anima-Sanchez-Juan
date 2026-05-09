@@ -1,11 +1,13 @@
-function ProductCard({ agregarAlCarrito, ...props }) {
+function ProductCard({ agregarAlCarrito, producto }) {
   return (
     <div className="card">
       <div className="card-body">
-        <h2>{props.nombre}</h2>
-        <p>{props.precio}</p>
+        <h2>{producto.nombre}</h2>
+        <p>{producto.precio}</p>
       </div>
-      <button onClick={agregarAlCarrito}>+ Agregar a Mi Carrito</button>
+      <button onClick={() => agregarAlCarrito(producto)}>
+        + Agregar a Mi Carrito
+      </button>
     </div>
   );
 }

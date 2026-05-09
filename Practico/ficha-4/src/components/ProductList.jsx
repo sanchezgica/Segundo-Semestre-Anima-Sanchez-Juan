@@ -1,11 +1,14 @@
 import ProductCard from "./ProductCard";
 function ProductList({ agregarAlCarrito, productos }) {
   return (
-    <div className="container">
+    <div className="contenedor-productos">
       {productos.map((producto) => (
-        <ProductCard key={producto.id} {...producto}></ProductCard>
+        <ProductCard
+          key={producto.id}
+          producto={producto}
+          agregarAlCarrito={agregarAlCarrito}
+        ></ProductCard>
       ))}
-      ;
     </div>
   );
 }
