@@ -5,20 +5,22 @@ function CarritoComponent({ carrito }) {
       <div className="carrito">
         <h2>Mi Carrito</h2>
         {carrito.length > 0 ? (
-          <ul>
+          <ul className="lista-carrito">
             {carrito.map((item, index) => (
               <li key={index}>
-                <span>
-                  {item.nombre}
-                  {item.precio}
-                </span>
+                <div className="elemento-lista-carrito">
+                  <span>{item.nombre}</span>
+                  <span>${item.precio}</span>
+                </div>
               </li>
             ))}
           </ul>
         ) : (
           "Tu Carrito está vacío :("
         )}
-        <p>Precio total: {total}</p>
+        <div className="precio-total">
+          <p>Precio total: ${total}</p>
+        </div>
       </div>
     </>
   );

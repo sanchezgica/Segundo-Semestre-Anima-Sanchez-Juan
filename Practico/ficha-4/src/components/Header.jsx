@@ -1,7 +1,7 @@
 function Header() {
   return (
     <div className="header">
-      <button className="cart-btn">Mi Carrito</button>
+      <button className="btn-cart">Mi Carrito</button>
     </div>
   );
 }

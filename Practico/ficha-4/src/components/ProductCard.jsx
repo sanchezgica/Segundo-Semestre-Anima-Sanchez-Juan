@@ -3,10 +3,10 @@ function ProductCard({ agregarAlCarrito, producto }) {
     <div className="card">
       <div className="card-body">
         <h2>{producto.nombre}</h2>
-        <p>{producto.precio}</p>
+        <p>${producto.precio}</p>
       </div>
-      <button onClick={() => agregarAlCarrito(producto)}>
-        + Agregar a Mi Carrito
+      <button className="btn-card" onClick={() => agregarAlCarrito(producto)}>
+        + Añadir a Mi Carrito
       </button>
     </div>
   );
