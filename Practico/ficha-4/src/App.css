@@ -12,7 +12,13 @@
   width: 180px;
   border-radius: 12px;
   border: solid 1px rgba(0, 0, 0, 0.262);
+}
+
+.card:hover {
   box-shadow: rgba(0, 0, 0, 0.262) 2px 2px 12px;
+  cursor: pointer;
+  scale: 1.1;
+  transition: all 30ms ease-in-out allow-discrete;
 }
 
 .card-body {
@@ -48,6 +54,13 @@
   color: white;
   font-weight: bold;
   border: none;
+}
+
+.btn-card:hover {
+  scale: 1.02;
+  background-color: rgb(206, 134, 0);
+  color: white;
+  cursor: pointer;
 }
 
 .btn-cart::before {
@@ -95,4 +108,5 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 4px 8px;
 }

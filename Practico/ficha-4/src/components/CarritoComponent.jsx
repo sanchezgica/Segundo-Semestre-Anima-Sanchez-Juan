@@ -19,7 +19,7 @@ function CarritoComponent({ carrito }) {
           "Tu Carrito está vacío :("
         )}
         <div className="precio-total">
-          <p>Precio total: ${total}</p>
+          <b>Precio total: ${total}</b>
         </div>
       </div>
     </>
