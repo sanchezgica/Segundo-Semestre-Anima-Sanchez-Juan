@@ -7,10 +7,11 @@ import AboutComponent from "./components/sections/AboutComponent.jsx";
 import InterestComponent from "./components/sections/InterestComponent.jsx";
 import ContactComponent from "./components/sections/ContactComponent.jsx";
 import PortfolioComponent from "./components/sections/PortfolioComponent.jsx";
+import { useApp } from "./context/AppContext.jsx";
 
 function App() {
+  const { seccionActiva } = useApp();
   const [count, setCount] = useState(0);
-  const [seccionActiva, setSeccionActiva] = useState("about");
   const renderContenidoPrincipal = () => {
     switch (seccionActiva) {
       case "about":
@@ -33,7 +34,7 @@ function App() {
         style={{ height: "100%", width: "100%" }}
       >
         <div className="row">
-          <Navbar setSeccionActiva={setSeccionActiva}></Navbar>
+          <Navbar></Navbar>
         </div>
         <div className="row" style={{ height: "100%" }}>
           <Sidebar

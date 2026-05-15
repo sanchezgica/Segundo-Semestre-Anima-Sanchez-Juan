@@ -1,4 +1,7 @@
-function MenuComponent({ seccionActiva, setSeccionActiva }) {
+import { useApp } from "../../context/AppContext";
+
+function MenuComponent() {
+  const [seccionActiva, setSeccionActiva] = useApp();
   const menuItems = [
     { id: "about", label: "Sobre Proyecto" },
     { id: "interest", label: "Intereses" },
