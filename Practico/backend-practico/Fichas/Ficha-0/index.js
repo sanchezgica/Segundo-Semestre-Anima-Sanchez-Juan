@@ -20,6 +20,8 @@ function buscarPlanta(id) {
   console.log(buscarPlanta);
 }
 
+console.log(buscarPlanta(2));
+
 function modificarPlanta(id, nuevoNombre) {
   const planta = buscarPlanta(id);
   if (planta) {
