@@ -1,3 +1,7 @@
+const express = require("express");
+
+const app = express();
+
 const plantas = [
   { id: 1, nombre: "Lechuga" },
   { id: 2, nombre: "Albahaca" },
@@ -28,3 +32,11 @@ function modificarPlanta(id, nuevoNombre) {
     planta.nombre = nuevoNombre;
   }
 }
+
+app.get("/plantas", (req, res) => {
+  res.json(plantas);
+});
+
+app.listen(3000, () => {
+  console.log("Servidor corriendo en localhost puerto:3000");
+});
