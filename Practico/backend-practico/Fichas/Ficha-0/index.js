@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
+
 const plantas = [
   { id: 1, nombre: "Lechuga" },
   { id: 2, nombre: "Albahaca" },
@@ -50,6 +52,37 @@ app.get("/plantas/:id", (req, res) => {
   } else {
     res.json({ mensaje: "Planta no encontrada" });
   }
+});
+
+//<---- Empieza apartado Ficha 2 ---->
+//Parte 1 POST
+app.post("/plantas", (req, res) => {
+  const nombre = req.body.nombre;
+  agregarPlanta(nombre);
+  if (!nombre) {
+    return res.send("Falta el nombre de la planta");
+  } else {
+    res.status(200).json({ mensaje: "Planta agregada con exito" });
+  }
+});
+
+// Parte 4 PUT
+app.put("/plantas/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const nuevoNombre = req.body.nombre;
+  const planta = buscarPlanta(id);
+  if (planta) {
+    planta.nombre = nuevoNombre;
+    res.status(200).json({ mensaje: "Planta Modificada", planta: planta });
+  } else {
+    res.status(404).json({ mensaje: "Planta no encontrada" });
+  }
+});
+
+// Parte 5 DELETE
+
+app.delete("/plantas/:id", (req, res) => {
+  res.status(200).json({ mensaje: "Planta Eliminada" });
 });
 
 app.listen(3000, () => {
